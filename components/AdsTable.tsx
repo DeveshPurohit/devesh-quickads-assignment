@@ -12,7 +12,15 @@ import Image from "next/image";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 
 const AdsTable = () => {
+
   const adsData = data2.data.results;
+
+  function formatSeconds(seconds: number) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
   return (
     <div className="border  shadow-md rounded-md">
       <Table className="">
@@ -43,8 +51,8 @@ const AdsTable = () => {
               <TableCell>{video.brandName}</TableCell>
               <TableCell>{video.totalSpend || 0}</TableCell>
               <TableCell>{video.last30Days || 0}</TableCell>
-              <TableCell>{video.publishedAt}</TableCell>
-              <TableCell>{video.duration}</TableCell>
+              <TableCell className="whitespace-nowrap">{new Date(video.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</TableCell>
+              <TableCell>{formatSeconds(video.duration)}</TableCell>
             </TableRow>
           ))}
         </TableBody>
