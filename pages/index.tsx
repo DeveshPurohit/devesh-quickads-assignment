@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-4 w-[25rem] md:w-[37rem] lg:w-[70rem]">
+      <section className="p-4 w-[25rem] md:w-[37rem] lg:w-[72rem]">
         <AdsTable/>
       </section>
     </main>
