@@ -18,7 +18,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center bg-gray-50 ${inter.className}`}
     >
       <section className="bg-slate-300 w-full">
-        <div className="flex flex-col justify-center items-center space-y-4 py-4">
+        <div className="flex flex-col justify-center items-center space-y-4 py-5">
           <h1 className="text-2xl font-bold">{company.legalName}</h1>
           <div className="flex space-x-4">
             <button className="py-1 px-2 rounded-md border bg-white flex justify-center items-center">
